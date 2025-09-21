@@ -24,9 +24,6 @@ const nextConfig: NextConfig = {
     domains: ["i.postimg.cc", "i.pinimg.com", "avatars.githubusercontent.com"],
   },
 
-  // Static export doesn't support headers() or redirects()
-  // These will be handled by your hosting provider (Vercel)
-
   // Experimental features for better performance
   experimental: {
     optimizePackageImports: [
@@ -53,6 +50,17 @@ const nextConfig: NextConfig = {
       };
     }
     return config;
+  },
+
+  // Redirects must be inside the config
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        destination: "https://seraui.com/:path*",
+        permanent: true,
+      },
+    ];
   },
 };
 
