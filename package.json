@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "tsx ./src/scripts/build-md-files.ts && next build",
+    "build": "tsx ./src/scripts/build-md-files.ts && next build && next export",
     "build:analyze": "set ANALYZE=true && next build",
     "start": "next start",
     "lint": "next lint",
