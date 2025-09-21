@@ -1,4 +1,9 @@
 {
+  "framework": null,
+  "buildCommand": "next build && next export",
+  "outputDirectory": "out",
+  "installCommand": "npm install",
+  "devCommand": "npm run dev",
   "redirects": [
     {
       "source": "/(.*)",
